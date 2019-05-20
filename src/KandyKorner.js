@@ -1,4 +1,4 @@
-//The components are imported here.
+//The modules are imported here. StoreList, EmployeeList, CandyList, and Candy are all components.
 
 import React, { Component } from 'react'
 import StoreList from './StoreList'
@@ -6,7 +6,7 @@ import EmployeeList from './EmployeeList'
 import CandyList from './CandyList'
 import Candy from './Candy'
 
-//Kandy is a class that is declared.
+//Kandy is a class that is declared. Component is a default class from React. It is imported above.
 
 class Kandy extends Component {
 
@@ -39,7 +39,7 @@ class Kandy extends Component {
         { id: 4, candyName: "Laffy Taffy" }
     ]
 
-    //State is set equal to an object with four properties.
+    //State is set equal to an object with four properties. 'this' references items in the class we are in.
 
     state = {
         stores: this.storeArray,
@@ -52,6 +52,7 @@ class Kandy extends Component {
 
     render() {
         return (
+            //JSX is returned. The props are passed and appear on the page.
             <div>
                 <StoreList stores={this.state.stores} />
                 <EmployeeList employees={this.state.employees} />
@@ -63,6 +64,6 @@ class Kandy extends Component {
 
 }
 
-//The class (or method?) Kandy is exported here.
+//The class Kandy is exported here.
 
 export default Kandy;
